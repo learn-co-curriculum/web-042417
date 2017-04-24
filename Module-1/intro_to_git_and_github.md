@@ -58,6 +58,7 @@
 - `git config --global user.email johndoe@example.com` sets an email that will be attached to commits
 
 ###Baisc Git Workflow
+--
 
 **Step 1:** Create a new directory `mkdir new_directory`  
   *Note: A directory is not the same as a repository* 
@@ -97,19 +98,80 @@
 **Step 10:** Continue to add, commit, and push changes
   `git add .`  
   `git commit -m "new message"`  
-  `git push origin master`  
+  `git push origin master`
+  
+###Git Branching and Merge Conflicts
+--    
+####Creating a Branch
 
-####Resolving Merge Conflicts
+There are two ways to create a branch in git.  
 
-**Step 1:** Go to the JS file on github and make a change then commit.
+**Option 1:**  
+  `git branch <new_branch>` creates a new branch  
+  `git checkout <new_branch>` moves you to the new branch  
 
-**Step 2:** In your local repository make do a git pull to grab changes.
+**Option 2:**  
+  `git checkout -b <new_branch>` creates a new branch and moves you to it  
 
-**Step 3:** Open your favorite text editor, such as Atom, and navigate to the file that has merge conflicts.
+####Moving Between Branches
 
-**Step 4:** To see the beginning of the merge conflict in your file, search the file for the conflict marker ```<<<<<<<```. When you open the file in your text editor, you'll see the changes from the HEAD or base branch after the line ```<<<<<<< HEAD```. Next, you'll see ```=======```, which divides your changes from the changes in the other branch, followed by ```>>>>>>> BRANCH-NAME```. 
+To move between branches:  
+`git checkout <branch_I_want_to_go_to>` moves you to specified branch.  
 
-**Step 5:** Decide if you want to keep only your branch's changes, keep only the other branch's changes, or make a brand new change, which may incorporate changes from both branches. Delete the conflict markers <<<<<<<, =======, >>>>>>> and make the changes you want in the final merge
+To list available branches:  
+`git branch` will list all branches.  
+
+####Merging Branches
+
+We can combine two branches together by using `git merge`  
+
+Let's say we have a branch **master** and a branch **feature**  
+
+In order to combine the two (from the master branch), we run...  
+
+`git merge feature`  
+
+###Merge Conflicts
+
+Git is smart, but not that smart. Merge conflicts occur when the changes between 2 branches overlap, and git is not sure which version you want.  
+
+When you are trying to merge and a conflict arises, your terminal will tell you, and it will look something like this...  
+
+```
+Auto-merging test.rb
+CONFLICT (content): Merge conflict in test.rb
+Automatic merge failed; fix conflicts and then commit the result.
+```
+The conflicts will also appear in your files with special tags.  
+
+```ruby
+<<<<<<< HEAD
+puts "Hello"
+puts "adkljfdklsajf"
+=======
+puts "Hi"
+puts "More things"
+>>>>>>> conflict
+```
+
+The first section of the code is from our master branch and the second is the code we are trying to merge in.  
+
+Here you will have to manually select the code you want.  
+
+```ruby
+puts "adkljfdklsajf"
+puts "Hi"
+puts "More things"
+```
+
+After you select the code you want to keep you will have to add and commit these changes.  
+
+```
+git add .
+git commit -m "Fixed conflict"
+```
+
+
 
 ####How to Create a Pull Request on Github
 
@@ -125,6 +187,7 @@
 8. Click Send pull request
 
 ![git_workflow](http://1.bp.blogspot.com/-FmqYrygSQhI/U2PhVzVH_PI/AAAAAAAAAUA/umErszRBJYA/s1600/git_workflow_github_flow.jpg)
+
 
 
 ###Resources
