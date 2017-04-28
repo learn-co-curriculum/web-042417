@@ -1,5 +1,5 @@
 
-======
+
 ## Multiple Classes
 
 ###Learning Objectives:
@@ -8,8 +8,7 @@
 - Use hashes and arrays as variables to store multiple objects
 - Organize multiple classes using a main file
 
-<br>
----
+
 
 | **Section**      | **Timing** | **Summary** |
 |------------------|------------|-------------|
