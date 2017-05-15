@@ -204,7 +204,7 @@ end
 use Rack::Reloader 0
 run Montana.new
 ```
-
+>binding() is a kernel method that returns the binding--essentially the scope which code is being executed. Not only that, binding() returns the binding as an object, so you can store it for future use, and even pass it around. That means that you can request the scope of a block of code (the variables that are available to it) at that time in execution, and use it at another time, when that scope might have already expired. 
 
 ---
 
