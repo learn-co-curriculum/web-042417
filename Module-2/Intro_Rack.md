@@ -256,6 +256,10 @@ end
 
 Congradulations! You made a rack application! As you can see there requires tons of setup to build this out. Think about how long my case statement could get if we were building a large application. No need to worry SINATRA is here! 
 
+###Jimnalogy
+![](https://cdn0.vox-cdn.com/thumbor/dmcYsUd4VInsNdVl9jEEO_KbjPw=/800x0/filters:no_upscale()/cdn0.vox-cdn.com/uploads/chorus_asset/file/8518019/not_hot_dog_app.png)
+
+NOT HOT DOG IS A 404
 
 ## Closing - 5 mins 
 
