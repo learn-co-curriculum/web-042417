@@ -1,13 +1,13 @@
-
 ---
 title: Rack from scratch
-type: lesson
-duration: 1hr
+type: Lecture
+duration: "1hr"
 creator:
-    name: Tony
-    city: NYC 
-competencies: HTTP and Servers w/Ruby
+    name: Tony Guerrero
+    city: NYC
+competencies:  HTTP and Servers w/Ruby 
 ---
+
 
 #What the Rack?
 
