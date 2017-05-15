@@ -92,7 +92,6 @@ rackup config.ru
 
 >Aside: We can respond with html by changing the content-type. 
 
-**Person with a name and ability to sing**
 
 ```ruby
 class Montana
