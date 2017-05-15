@@ -149,6 +149,10 @@ use Rack::Reloader 0
 run Montana.new
 ```
 Who wants to write HTML in a string everytime?? `Luis!` That seems lame.. Tony is here to save the day. Copy pasta the below and lets render us some html... html.erb that is!
+
+>Reminder: Explain what template engines are and why they are useful. 
+
+
 ###Templating 
 
 Step 1:
