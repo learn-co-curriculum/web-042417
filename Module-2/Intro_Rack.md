@@ -9,8 +9,8 @@ competencies:  HTTP and Servers w/Ruby
 ---
 
 
-#What the Rack?
-
+What the Rack?
+-
 
 ### Learning Objectives
 
@@ -36,7 +36,8 @@ competencies:  HTTP and Servers w/Ruby
 ---
 
 
-##Opening: What is "Rack" - 5 minutes
+Opening: What is "Rack" - 5 minutes
+-
 Rack is the underlying technology behind nearly all of the web frameworks in the Ruby world. "Rack" is actually a few different things:
 
 - An architecture - Rack defines a very simple interface, and any code that conforms to this interface can be used in a Rack application. This makes it very easy to build small, focused, and reusable bits of code and then use Rack to compose these bits into a larger application.
@@ -52,12 +53,11 @@ The call method must return an array of three elements These elements are, **in 
 A nice side effect of the call interface is that procs and lambdas can be used as Rack objects.    
 <br>
 
----
 
 
-##I Do: First Rack App - 10 minutes
-
-####Directions:
+I Do: First Rack App - 10 minutes
+-
+**Directions:**
 
 We need to create a config.ru file which stands for rackup. This is like our run file in our CLI project.
 
@@ -102,8 +102,8 @@ end
 
 run Montana.new
 ```
-##I Do: Middleware - 5 minutes
-
+I Do: Middleware - 5 minutes
+-
 One of the things that makes Rack so great is how easy it is to add a chain middleware components between the webserver and the app to customize the way your request/response behaves. 
 
 
@@ -132,9 +132,10 @@ We will be using something similar in Sinatra called shotgun its for more comple
 
 **Change the string and refresh your page**
 
-##I Do: The "Response Object" - 5 minutes
+I Do: The "Response Object" - 5 minutes
+-
+**What is it?**
 
-####What is it?
 _Rack::Response provides a convenient interface to create a Rack response.
 It allows setting of headers and cookies, and provides useful defaults (an OK response with empty headers and body)._
 
@@ -153,7 +154,7 @@ Who wants to write HTML in a string everytime?? `Luis!` That seems lame.. Tony i
 >Reminder: Explain what template engines are and why they are useful. 
 
 
-###Templating 
+**Templating**
 
 Step 1:
 ```ruby
@@ -207,16 +208,17 @@ run Montana.new
 
 ---
 
-##You Do:  Repeat the above steps and try it on your own - 5 minutes
-
-####Questions????
-
-
+You Do:  Repeat the above steps and try it on your own - 5 minutes
+-
+**Questions????**
 
 
-##I Do: The "Request Object" - 5 minutes
 
-####What is it?
+
+I Do: The "Request Object" - 5 minutes
+-
+**What is it?**
+
 _Rack::Request provides a convenient interface to a Rack environment. It is stateless, the environment env passed to the constructor will be directly modified._
 
 Lets take a look at what this object contains:
@@ -233,7 +235,7 @@ class Montana
 end
 ```
 
-####What do you see?
+**What do you see?**
 Lots of stuff; `path`, `body` etc. What do you think we can do with the path?... 
 
 
@@ -256,14 +258,14 @@ end
 
 Congradulations! You made a rack application! As you can see there requires tons of setup to build this out. Think about how long my case statement could get if we were building a large application. No need to worry SINATRA is here! 
 
-###Jimnalogy
+**Jimnalogy**
 ![](https://cdn0.vox-cdn.com/thumbor/dmcYsUd4VInsNdVl9jEEO_KbjPw=/800x0/filters:no_upscale()/cdn0.vox-cdn.com/uploads/chorus_asset/file/8518019/not_hot_dog_app.png)
 
 NOT HOT DOG IS A 404
 
 ## Closing - 5 mins 
-
-####What did we learn?
+-
+**What did we learn?**
 - What is a ru file?
 - What do I need for a Rack application to run?
 - What is middleware?
