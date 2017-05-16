@@ -1,0 +1,12 @@
+<ul class="collection">
+    <% @todos.each do |todo| %>
+      <li class="collection-item">
+        <a href="/todos/<%= todo.id %>"><%= todo.title %></a>
+        <% if todo.done %>
+          <i class="material-icons">thumb_up</i>
+        <% else %>
+          <i class="material-icons">thumb_down</i>
+        <% end %>
+      </li>
+    <% end %>
+</ul>
