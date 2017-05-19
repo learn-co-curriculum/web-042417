@@ -1,30 +1,43 @@
+---
+title: Inheritance and Modules
+type: lesson
+duration: "1hr"
+creator:
+    name: Tony Guerrero
+    city: NYC
+competencies: Classical Inheritance
+---
+
 #Inheritance and Composition
 
+
 ##Quick Review:
-1. What is an instance method? 
+
+1. What is an instance method?
 1. What is self?
 
-![](Self.png)
+
 
 ##Objectives:
+
 1. Describe what inheritance is and identify the benefits & disadvantages of its use. Create  2 classes in which one class inherits from another class.
 1. Create a class that can override methods from it's parent class.
 1. Understand super.
-2. Use modules for namespacing.
-3. Include,prepend and extend.
+2. Use modules for name::spacing.
+3. Include, prepend and extend.
 
 ##Inheritance:
 
-- Inheritance is used to indicate that one class will get most or all of its features from a parent class. 
+- Inheritance is used to indicate that one class will get most or all of its features from a parent class.
 - You design the class types based on what they are.
-    
+
 **When is inheritance useful?**
 
 - DRY - Don't Repeat Yourself & reuse code functionality
 - Faster implementation time
 - Common single source attributes
 
->Example: Suppose you're building an application that helps you ship goods. Many forms of shipping are available, but all forms share some basic functionality (weight calculation, perhaps). We don’t want to duplicate the code that implements this functionality across the implementation of each shipping type. 
+>Example: Suppose you're building an application that helps you ship goods. Many forms of shipping are available, but all forms share some basic functionality (weight calculation, perhaps). We don’t want to duplicate the code that implements this functionality across the implementation of each shipping type.
 
 ##Demo
 
@@ -48,7 +61,7 @@ end
 
 - Single Inheritance
     - In Ruby, a class can only inherit from a single other class. It *cannot* inherit from multiple classes.
-    ![](https://draftin.com:443/images/13819?token=LgAN2Cjq0VY2E1kC14KkUjazImyXfmOTtc-EiNJbdofQ25kQLkSBtxVpde5pu1y2if0_H6LTEUeTaklH1Yjmimw) 
+    ![](https://draftin.com:443/images/13819?token=LgAN2Cjq0VY2E1kC14KkUjazImyXfmOTtc-EiNJbdofQ25kQLkSBtxVpde5pu1y2if0_H6LTEUeTaklH1Yjmimw)
     - Benefits and disadvantages to single & multiple inheritance
     - In Ruby, initialize is an ordinary method and inherited just like another method.
 
@@ -58,7 +71,7 @@ end
 class Box
 
   def initialize(w, h)
-    @width = w 
+    @width = w
     @height = h
   end
 
@@ -92,23 +105,23 @@ class Dog
   def initialize(breed)  
     @breed = breed  
   end  
-  
+
   def to_s  
     "(#@breed, #@name)"  
   end  
 end  
-  
+
 class Lab < Dog  
   def initialize(breed, name)  
     super(breed)  
-    #super 
+    #super
         #calls the method of the parent class
         #& passes all the arguments into the parent class
     @name = name  
   end  
 end  
-  
-puts Lab.new("Labrador", "Ben").to_s 
+
+puts Lab.new("Labrador", "Ben").to_s
 # .to_s is called implicitly with any puts or print or p method call  
 ```
 
@@ -162,7 +175,7 @@ class Dolphin
   def swim
      puts "i'm riding waves"
   end
- 
+
   def leg_count
      puts 0
   end
@@ -256,5 +269,3 @@ irb(main):015:0> Array.ancestors
 [2] pry(main)> Hash.ancestors
 => [Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
 ```
-
-
