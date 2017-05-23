@@ -1,7 +1,7 @@
-#Custom ORM: Pokedex 
+# Custom ORM: Pokedex 
 >***CODE ALONG***
 
-###Learning Objectives:
+### Learning Objectives:
 - Create project environment 
 - Organize files
 - Setup Gemfile
@@ -15,7 +15,7 @@
 
 <br>
 ---
-###Project Environment
+### Project Environment
 
 Create main project folder called `POKEDEX`
 ![](/Users/Toneloke/Desktop/Screen Shot 2017-05-02 at 8.48.02 AM.png)
@@ -25,7 +25,7 @@ Create main project folder called `POKEDEX`
 ---
 
 
-###Class how do we setup a Gemfile?          
+### Class how do we setup a Gemfile?          
 
 >What are gemfiles?
 >Versions?
@@ -47,7 +47,7 @@ bundle install
 
 <br>
 
-###Migration creation
+### Migration creation
 
 First we need a .sql file to create our pokemon table
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS pokemon(id INTEGER PRIMARY KEY, name TEXT, type TEXT)
 
 <br>
 
-###DB adapter
+### DB adapter
 We need a way to communicate with our db in our environment file. First lets create a ruby class to do this.
 
 `$ touch sql_runner.rb`
@@ -91,7 +91,7 @@ end
 
 <br>
 
-###Environment configuration and connections string
+### Environment configuration and connections string
 We need to setup bundler to use the gems we imported. 
 
 ```ruby
@@ -101,7 +101,7 @@ require 'pry'
 ```
 Import our runner file and pokemon model.
 
-``ruby
+```ruby
 require_relative "../lib/pokemon"
 require_relative "sql_runner"
 ```
@@ -109,8 +109,10 @@ require_relative "sql_runner"
 Setup our db connection
 
 ```ruby
+
 @db = SQLite3::Database.new('./db/pokemon.db')
 @db.execute("DROP TABLE IF EXISTS pokemon;")
+
 ```
 
 Create your table migration and execute with db
@@ -124,7 +126,7 @@ Create your table migration and execute with db
 
 <br>
 
-###Pokemon Model
+### Pokemon Model
 This is our ORM that will communicate with our db and query for pokemon.
 
 ```ruby           
