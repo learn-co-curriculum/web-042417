@@ -1,8 +1,3 @@
--The era of web components
--presentational components vs container components
--Creating JS classes to render html
--event listeners in classes
-
 
 
 ---
