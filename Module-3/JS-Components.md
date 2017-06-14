@@ -1,10 +1,3 @@
--The era of web components
--presentational components vs container components
--Creating JS classes to render html
--event listeners in classes
-
-
-
 ---
 title: The Era of Components
 type: lesson
@@ -107,4 +100,4 @@ Examples: Page, Sidebar, Story, UserInfo, List.
 ![](https://cdn-images-1.medium.com/max/800/1*inU9OmAFSDYKFm8pstsCDw.png)
 
 
-##Live Coding
+## Live Coding 
