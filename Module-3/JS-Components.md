@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 99ac2a6f4178b6093546815237b0083c53aeb558
 ---
 title: The Era of Components
 type: lesson
@@ -100,4 +105,8 @@ Examples: Page, Sidebar, Story, UserInfo, List.
 ![](https://cdn-images-1.medium.com/max/800/1*inU9OmAFSDYKFm8pstsCDw.png)
 
 
+<<<<<<< HEAD
 ## Live Coding 
+=======
+##Live Coding
+>>>>>>> 99ac2a6f4178b6093546815237b0083c53aeb558
