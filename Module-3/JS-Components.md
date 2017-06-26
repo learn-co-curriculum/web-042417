@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 99ac2a6f4178b6093546815237b0083c53aeb558
 ---
 title: The Era of Components
 type: lesson
