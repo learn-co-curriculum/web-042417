@@ -1,5 +1,5 @@
 
-# API Authentication with Express - Tokens
+# API Authentication in the Browser - Tokens
 
 ### Objectives
 - Understand why authentication tokens are commonly used when interacting with APIs
